@@ -5,6 +5,7 @@ class Teacher(models.Model):
 	first_name = models.CharField(max_length = 20)
 	last_name = models.CharField(max_length = 20)
 	gender = models.CharField(max_length = 20)
+	id_number = models.IntegerField(null = True)
 	email = models.EmailField(max_length = 50)
 	phone_number = models.CharField(max_length = 20)
 	date_employed = models.DateField()

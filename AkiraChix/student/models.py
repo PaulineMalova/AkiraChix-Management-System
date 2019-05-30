@@ -1,4 +1,5 @@
 from django.db import models
+from course.models import Course
 
 # Create your models here.
 #Note the conventions
@@ -20,4 +21,5 @@ class Student(models.Model) :  #Inheritance of attributes of another class. Mode
 	email = models.EmailField(max_length = 70)
 	phone_number = models.CharField(max_length = 20)
 	date_joined = models.DateField()
+	courses = models.ManyToManyField(Course)
 
