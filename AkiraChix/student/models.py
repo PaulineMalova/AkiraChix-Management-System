@@ -23,3 +23,6 @@ class Student(models.Model) :  #Inheritance of attributes of another class. Mode
 	date_joined = models.DateField()
 	courses = models.ManyToManyField(Course)
 
+	def __str__(self):
+		return self.first_name
+
