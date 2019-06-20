@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		table{
+			border: 2px solid black;
+			border-collapse: collapse;
+		}
+
+		table tr{
+			border-bottom: 2px solid black;
+		}
+
+		table tr th{
+			border-right: 2px solid black;
+		}
+
+		table tr td{
+			border-right: 2px solid black;
+		}
+	</style>
+</head>
+<body>
+
+	<table>
+
+		<tr>
+			<th>Name</th>
+			<th>Course Duration<br>(months)</th>
+			<th>Course Description</th>
+			<th>Teacher</th>
+
+		</tr>
+
+		{% for course in courses %}
+
+			<tr>
+				<td>{{ course.name }}</td>
+				<td>{{ course.duration_in_months }}</td>
+				<td>{{ course.course_description }}</td>
+				<td>{{ course.teacher }}</td>
+			</tr>
+
+		{% endfor %}	
+
+	</table>
+
+</body>
+</html>	

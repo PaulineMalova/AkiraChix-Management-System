@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+		body{
+			background-color: #eee;
+		}
+
+		.formbody{
+			width: 1000px;
+			margin: 0 auto;
+		}
+	</style>
+
+</head>
+<body>	
+
+	<div class = "formbody">
+		<h2>Add a new teacher</h2>
+			<form method="POST">{%csrf_token%}
+				{{form.as_p}}
+
+				<button type="submit"> Add </button>
+
+
+			</form>	
+	</div>
+
+</body>
+</html>

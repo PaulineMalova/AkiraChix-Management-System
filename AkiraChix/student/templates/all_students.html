@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		table{
+			border: 2px solid black;
+			border-collapse: collapse;
+		}
+
+		table tr{
+			border-bottom: 2px solid black;
+		}
+
+		table tr th{
+			border-right: 2px solid black;
+		}
+
+		table tr td{
+			border-right: 2px solid black;
+		}
+	</style>
+</head>
+<body>
+
+	<table>
+
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Registration Number</th>
+			<th>Gender</th>
+
+		</tr>
+
+		{% for student in students %}
+
+			<tr>
+				<td>{{ student.first_name }}</td>
+				<td>{{ student.last_name }}</td>
+				<td>{{ student.registration_number }}</td>
+				<td>{{ student.gender }}</td>
+			</tr>
+
+		{% endfor %}	
+
+	</table>
+
+</body>
+</html>	
