@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 from django.shortcuts import render,redirect
+=======
+from django.shortcuts import render
+>>>>>>> 7c5cb535c33da0829c62f57c0c53b1da404afb7e
 from .forms import TeacherForm
 from .models import Teacher
 
@@ -13,8 +17,11 @@ def add_teacher(request):
 		if form.is_valid(): #checks for errors
 			form.save()
 
+<<<<<<< HEAD
 			return redirect('list_teachers')
 
+=======
+>>>>>>> 7c5cb535c33da0829c62f57c0c53b1da404afb7e
 	else:
 		forms = TeacherForm()
 
@@ -24,6 +31,7 @@ def add_teacher(request):
 def list_teachers(request):
 	teachers = Teacher.objects.all()
 	return render(request, "all_teachers.html", {"teachers" : teachers})
+<<<<<<< HEAD
 
 
 def teacher_details(request,pk):
@@ -46,3 +54,5 @@ def edit_teacher(request,pk):
 		form = TeacherForm(instance = teacher)
 
 	return render(request, "edit_teacher.html", {"form":form})				
+=======
+>>>>>>> 7c5cb535c33da0829c62f57c0c53b1da404afb7e

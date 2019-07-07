@@ -2,6 +2,7 @@
 <html>
 <head>
 
+<<<<<<< HEAD
 	<title>Add Student</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,10 +17,33 @@
 	</style>
 
 	
+=======
+	<style>
+		body{
+			background-color: #eee;
+		}
+
+		.formbody{
+			width: 1000px;
+			margin: 0 auto;
+		}
+
+		.forminputs{
+			background-color: #eee;
+		}
+
+		button{
+			background-color: #eee;
+		}
+
+	</style>
+
+>>>>>>> 7c5cb535c33da0829c62f57c0c53b1da404afb7e
 </head>
 <body>	
 <div class = "formbody">
 		<h2>Add a new student</h2>
+<<<<<<< HEAD
 
 		{% load crispy_forms_tags %}
 
@@ -80,6 +104,18 @@
 
 		{% endblock %}
 			
+=======
+			<form method="POST">{%csrf_token%}
+
+
+				<div class = "forminputs">
+					{{form.as_p}}
+				</div>	
+
+				<button type="submit"> Save </button>
+
+			</form>	
+>>>>>>> 7c5cb535c33da0829c62f57c0c53b1da404afb7e
 	</div>
 </body>
 </html>
