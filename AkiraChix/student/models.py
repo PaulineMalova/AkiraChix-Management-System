@@ -22,6 +22,7 @@ class Student(models.Model) :  #Inheritance of attributes of another class. Mode
 	phone_number = models.CharField(max_length = 20)
 	date_joined = models.DateField()
 	courses = models.ManyToManyField(Course)
+	image = models.ImageField(upload_to = "profile_pictures", blank = True)
 
 	def __str__(self):
 		return self.first_name
