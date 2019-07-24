@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 from django.shortcuts import render, redirect
-=======
-from django.shortcuts import render
->>>>>>> 7c5cb535c33da0829c62f57c0c53b1da404afb7e
 from .forms import StudentForm
 from .models import Student
 
@@ -15,17 +11,11 @@ def add_student(request):
 		form = StudentForm(request.POST)
 		if form.is_valid():
 			form.save()
-
-<<<<<<< HEAD
 			return redirect('list_students')
-
-=======
->>>>>>> 7c5cb535c33da0829c62f57c0c53b1da404afb7e
 	else:
 		form = StudentForm()
 
 	return render(request, "add_student.html", {"form" : form})
-<<<<<<< HEAD
  
 
 def list_students(request):
@@ -53,10 +43,4 @@ def edit_student(request, pk):
 		form = StudentForm(instance=student)
 
 	return render(request, "edit_student.html", {"form" : form})				
-=======
 
-
-def list_students(request):
-	students = Student.objects.all()
-	return render(request, "all_students.html", {"students" : students})
->>>>>>> 7c5cb535c33da0829c62f57c0c53b1da404afb7e
